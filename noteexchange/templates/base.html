@@ -18,13 +18,12 @@
             }
             body {
                 background-color: #4DFF4D;
-            
             }
         </style>
         {%endblock%}
 
         {% block title %}
-            <title>Textbook Exchange</title>
+            <title>Note Exchange</title>
         {% endblock %}
         {%block javascripts%}
             <script type="text/javascript" src="{{url_for('static',filename='js/jquery.min.js') }}"></script>
@@ -43,18 +42,9 @@
                                 <a class="brand" href="/">Home</a>
                             </li>
                             <li>
-                                <a href="/{{user.id}}/listings">My Listings</a>
-                            </li>
-                            <li>
-                                <a href="/list_book">Add Listing</a>
-                            </li>
-                            <li>
                                 <form class="navbar-search pull-left" action="/search" method="POST">
                                     <input name="search" type="text" class="search-query" placeholder="Search by ISBN/Course">
                                 </form>
-                            </li>
-                            <li>
-                                <a href="/inbox"><i class="icon-envelope icon-white "></i></a>
                             </li>
                             </ul>
                         <form action="/logout" method="POST" style="padding-left:25px" class="navbar-form pull-right">
